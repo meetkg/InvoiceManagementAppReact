@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import {jwtDecode} from 'jwt-decode'; // Corrected import for jwt-decode
+import {jwtDecode} from 'jwt-decode'; 
 import API from '../api/axios';
 
 const Login = () => {

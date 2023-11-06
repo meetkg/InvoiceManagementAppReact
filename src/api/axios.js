@@ -1,4 +1,4 @@
-// In src/api/axios.js
+// src/api/axios.js
 
 import axios from 'axios';
 
@@ -7,10 +7,9 @@ const API = axios.create({
 });
 
 API.interceptors.request.use((config) => {
-  // Assuming you're storing your token in localStorage
   const token = localStorage.getItem('token');
   if (token) {
-    config.headers["Authorization"] = 'Bearer ' + token;
+    config.headers["Authorization"] = `Bearer ${token}`;
   }
   return config;
 }, (error) => {
